@@ -1,7 +1,46 @@
-# main links links
+# main links
 main:
-  - title: "Sample Navigation Link"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/navigation/
+  - title: "Quick start"
+    url: /docs/quick_start/
+  - title: "Blog posts"
+    url: /docs/writing/
+  - title: "Get the code"
+    url: https://github.com/blockchain-certificates
 
-  - title: "Sample Navigation Link 2"
-    url: /
+docs:
+  - title: Introduction
+    children:
+      - title: "Quick start"
+        url: /docs/quick_start/
+      - title: "Blog posts"
+        url: /docs/writing/
+      - title: "V2 highlights"
+        url: /docs/v2_highlights/
+      - title: "Deployments"
+        url: /docs/live_deployments/
+      - title: "About our Approach"
+        url: /docs/faq/
+
+  - title: Technical Docs
+    children:
+      - title: "System overview"
+        url: /docs/system_overview/
+      - title: "Verification process"
+        url: /docs/verify/
+      - title: "Schemas"
+        url: /docs/schemas/
+      - title: "Batch issuing technical"
+        url: /docs/batch_issuing_technical/
+      - title: "Bitcoin FAQ"
+        url: /docs/bitcoin_faq/
+      - title: "Design principles"
+        url: /docs/design_principles/
+
+  - title: Developer Guide
+    children:
+      - title: "Quick start"
+        url: /docs/quick_start/
+      - title: "Creating certificates"
+        url: /docs/creating_certs/
+      - title: "Get the code"
+        url: https://github.com/blockchain-certificates

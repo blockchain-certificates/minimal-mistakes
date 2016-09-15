@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Blockchain Certificates Assertion Schema, Version 1.2",
+  "id": "http://www.blockcerts.org/schema/1.2/assertion-1.2.json",
+  "description": "Extends the Open Badges Assertion Schema for certificates on the blockchain",
+  "type": "object",
+  "definitions": {
+    "JsonLdType": {
+      "description": "A type or an array of types that the assertion object represents. The first or only item should be 'Assertion', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'Assertion'",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "ImageBase64": {
+      "type": "string",
+      "description": "A base-64 encoded png image of the issuer's logo.",
+      "pattern": "data:image/png;base64,"
+    }
+  },
+  "properties": {
+    "@type": {
+      "$ref": "#/definitions/JsonLdType"
+    },
+    "id": {
+      "type": "string",
+      "format": "uri",
+      "description": "URI that links to the certificate on the viewer. Default is https://[domain]/[uid]"
+    },
+    "uid": {
+      "type": "string",
+      "pattern": "[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}",
+      "description": "Unique identifier, in GUID format. 1.2 changes: string pattern changed to guid"
+    },
+    "issuedOn": {
+      "$ref": "https://openbadgespec.org/v1/schema/assertion.json#/definitions/DateTime",
+      "description": "Date the the certificate JSON was created."
+    },
+    "evidence": {
+      "type": "string",
+      "format": "uri",
+      "description": "Text, uri, etc. that shows evidence of the recipient's learning that the certificate represents. Can be left as an empty string if not used."
+    },
+    "expires": {
+      "$ref": "https://openbadgespec.org/v1/schema/assertion.json#/definitions/DateTime",
+      "description": "Date the the certificate JSON expires."
+    },
+    "image:signature": {
+      "$ref": "#/definitions/ImageBase64",
+      "description": "A base-64 encoded png image of the issuer's signature."
+    }
+  },
+  "required": [
+    "@type",
+    "uid",
+    "issuedOn",
+    "id"
+  ],
+  "additionalProperties": true
+}
+
+

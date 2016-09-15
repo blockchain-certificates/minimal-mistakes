@@ -1,0 +1,173 @@
+{
+  "@context": [
+    {
+      "id": "@id",
+      "bc": "https://w3id.org/blockcerts#",
+      "obi": "https://w3id.org/openbadges#",
+      "cp": "https://w3id.org/chainpoint#",
+      "extensions": "https://w3id.org/openbadges/extensions#",
+      "validation": "obi:validation",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "schema": "http://schema.org/",
+      "sec": "https://w3id.org/security#",
+      "Assertion": "bc:Assertion",
+      "Certificate": "bc:Certificate",
+      "Issuer": "bc:Issuer",
+      "BlockchainCertificate": "bc:BlockchainCertificate",
+      "CertificateDocument": "bc:CertificateDocument",
+      "VerificationObject": "bc:VerificationObject",
+      "Recipient": "bc:Recipient",
+      "BlockchainReceipt": "bc:BlockchainReceipt",
+      "issuer": {
+        "@id": "bc:issuer",
+        "@type": "@id"
+      },
+      "recipient": {
+        "@id": "bc:recipient",
+        "@type": "@id"
+      },
+      "blockchaincertificate": {
+        "@id": "bc:blockchaincertificate",
+        "@type": "@id"
+      },
+      "certificate": {
+        "@id": "bc:certificate",
+        "@type": "@id"
+      },
+      "document": {
+        "@id": "bc:document",
+        "@type": "@id"
+      },
+      "assertion": {
+        "@id": "bc:assertion",
+        "@type": "@id"
+      },
+      "verify": {
+        "@id": "bc:verificationobject",
+        "@type": "@id"
+      },
+      "recipient": {
+        "@id": "bc:recipient",
+        "@type": "@id"
+      },
+      "receipt": {
+        "@id": "bc:receipt",
+        "@type": "@id"
+      },
+      "pubkey": {
+        "@id": "bc:pubkey"
+      },
+      "image:signature": {
+        "@id": "bc:image:signature"
+      },
+      "signature": {
+        "@id": "bc:signature"
+      },
+      "familyName": {
+        "@id": "schema:familyName"
+      },
+      "givenName": {
+        "@id": "schema:givenName"
+      },
+      "signer": {
+        "@id": "bc:signer",
+        "@type": "@id"
+      },
+      "attribute-signed": {
+        "@id": "bc:attribute-signed"
+      },
+      "ECDSA(secp256k1)": "bc:SignedBadge",
+      "name": {
+        "@id": "schema:name"
+      },
+      "uid": {
+        "@id": "bc:uid"
+      },
+      "subtitle": {
+        "@id": "bc:subtitle"
+      },
+      "title": {
+        "@id": "bc:title"
+      },
+      "description": {
+        "@id": "schema:description"
+      },
+      "type": {
+        "@id": "bc:type"
+      },
+      "url": {
+        "@id": "schema:url",
+        "@type": "@id"
+      },
+      "email": "schema:email",
+      "hashed": "obi:hashed",
+      "image": "obi:image",
+      "salt": "obi:salt",
+      "identity": "obi:identity",
+      "issuedOn": "obi:issuedOn",
+      "expires": "obi:expires",
+      "evidence": "obi:evidence",
+      "criteria": "obi:criteria",
+      "tags": "obi:tags",
+      "alignment": "obi:alignment",
+      "revocationList": "obi:revocationList",
+      "TypeValidation": "obi:TypeValidation",
+      "FrameValidation": "obi:FrameValidation",
+
+      "validatesType": "obi:validatesType",
+      "validationSchema": "obi:validationSchema",
+      "validationFrame": "obi:validationFrame",
+
+      "ChainpointSHA224v2": "cp:ChainpointSHA224v2",
+      "ChainpointSHA256v2": "cp:ChainpointSHA256v2",
+      "ChainpointSHA384v2": "cp:ChainpointSHA384v2",
+      "ChainpointSHA512v2": "cp:ChainpointSHA512v2",
+      "ChainpointSHA3-224v2": "cp:ChainpointSHA3-224v2",
+      "ChainpointSHA3-256v2": "cp:ChainpointSHA3-256v2",
+      "ChainpointSHA3-384v2": "cp:ChainpointSHA3-384v2",
+      "ChainpointSHA3-512v2": "cp:ChainpointSHA3-512v2",
+
+      "BTCOpReturn": "cp:BTCOpReturn",
+      "targetHash": "cp:targetHash",
+      "merkleRoot": "cp:merkleRoot",
+      "proof": "cp:proof",
+      "anchors":  "cp:anchors",
+
+      "sourceId": "cp:sourceId",
+      "right": "cp:right",
+      "left": "cp:left"
+    }
+  ],
+  "validation": [
+    {
+      "type": "TypeValidation",
+      "validatesType": "Assertion",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/assertion-1.2.json"
+    },
+    {
+      "type": "TypeValidation",
+      "validatesType": "Certificate",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/certificate-1.2.json"
+    },
+    {
+      "type": "TypeValidation",
+      "validatesType": "Issuer",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/issuer-1.2.json"
+    },
+    {
+      "type": "TypeValidation",
+      "validatesType": "CertificateDocument",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/certificate-document-1.2.json"
+    },
+    {
+      "type": "TypeValidation",
+      "validatesType": "BlockchainCertificate",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/blockchain-certificate-1.2.json"
+    },
+    {
+      "type": "TypeValidation",
+      "validatesType": "BlockchainReceipt",
+      "validationSchema": "http://www.blockcerts.org/schema/1.2/blockchain-receipt-1.2.json"
+    }
+  ]
+}

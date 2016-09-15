@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Certificate Document Version 1.2 Schema",
+  "id": "http://www.blockcerts.org/schema/1.2/certificate-document-1.2.json",
+  "description": "The complete certificate document, including the assertion, certificate, and issuer. Doesn't include the blockchain receipt. This part is hashed and placed on the blockchain",
+  "type": "object",
+  "definitions": {
+    "JsonLdType": {
+      "description": "A type or an array of types that the document object represents. The first or only item should be 'CertificateDocument', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'CertificateDocument'",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    "Certificate": {
+      "$ref": "http://www.blockcerts.org/schema/1.2/certificate-1.2.json"
+    },
+    "Assertion": {
+      "$ref": "http://www.blockcerts.org/schema/1.2/assertion-1.2.json"
+    },
+    "Issuer": {
+      "$ref": "http://www.blockcerts.org/schema/1.2/issuer-1.2.json"
+    },
+    "VerificationObject": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "title": "VerificationType",
+          "type": "string",
+          "enum": [
+            "hosted",
+            "signed",
+            "ECDSA(secp256k1)"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "Recipient": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "$ref": "#/definitions/JsonLdType"
+        },
+        "familyName": {
+          "type": "string",
+          "description": "Family name of the recipient. http://schema.org/Person#familyName"
+        },
+        "identity": {
+          "type": "string",
+          "description": "String that represents a recipient's identity. By default, it is an email address."
+        },
+        "type": {
+          "type": "string",
+          "description": "Type of value in the identity field. Default is 'email'."
+        },
+        "hashed": {
+          "type": "boolean",
+          "description": "Describes if the value in the identity field is hashed or not. We strongly recommend that the issuer hash the identy to protect the recipient. Backcompatible change to allow 2 types that occurred in the wild before proper validation."
+        },
+        "salt": {
+          "type": "string",
+          "description": "per the OBI standard, if the recipient identity is hashed, then this should contain the string used to salt the hash"
+        },
+        "pubkey": {
+          "type": "string",
+          "description": "Bitcoin address (compressed public key, usually 24 characters) of the recipient."
+        },
+        "givenName": {
+          "type": "string",
+          "description": "Given name of the recipient. http://schema.org/Person#givenName"
+        }
+      },
+      "required": [
+        "@type",
+        "familyName",
+        "identity",
+        "type",
+        "hashed",
+        "pubkey",
+        "givenName"
+      ],
+      "additionalProperties": true
+    }
+
+  },
+  "properties": {
+    "@type": {
+      "$ref": "#/definitions/JsonLdType"
+    },
+    "certificate": {
+      "$ref": "#/definitions/Certificate"
+    },
+    "assertion": {
+      "$ref": "#/definitions/Assertion"
+    },
+    "verify": {
+      "$ref": "#/definitions/VerificationObject"
+    },
+    "recipient": {
+      "$ref": "#/definitions/Recipient"
+    }
+  },
+  "required": [
+    "@type",
+    "certificate",
+    "assertion",
+    "verify",
+    "recipient"
+  ],
+  "additionalProperties": true
+}

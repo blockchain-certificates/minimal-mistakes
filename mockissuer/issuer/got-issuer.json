@@ -1,0 +1,14 @@
+{
+  "issuer_key": [
+    {
+      "date": "2016-08-28",
+      "key": "mmShyF6mhf6LeQzPdEsmiCghhgMuEn9TNF"
+    }
+  ],
+  "revocation_key": [
+    {
+      "date": "2016-08-28",
+      "key": "mz7poFND7hVGRtPWjiZizcCnjf6wEDWjjT"
+    }
+  ]
+}
