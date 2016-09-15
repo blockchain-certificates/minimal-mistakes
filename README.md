@@ -17,13 +17,13 @@ This repo contains the source for the [Blockchain Certificates Web Site](http://
   
 - The main page content is located in _includes/index.md
  
-# Site layout
+## Site layout
 
 The most common site layout changes you'll want to make are to navigation menus; see _data/navigation.yml.
 
 For other changes, consult the [Minimal Mistakes Technical Documentation](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/).
 
-# Rebuilding the site
+## Rebuilding the site
 
 To regenerate the site after you've made changes, run the following:
 
