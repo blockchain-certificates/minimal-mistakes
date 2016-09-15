@@ -6,6 +6,7 @@ This repo contains the source for the [Blockchain Certificates Web Site](http://
 
 - content is written in markdown, located in the _docs folder
 - note that file headers in the markdown files. These are used by jekyll when generating the site:
+
   ```
   ---
   title: "Page title"
@@ -13,6 +14,7 @@ This repo contains the source for the [Blockchain Certificates Web Site](http://
   permalink: /docs/my_link/
   ---
   ```
+  
 - The main page content is located in _includes/index.md
  
 # Site layout
