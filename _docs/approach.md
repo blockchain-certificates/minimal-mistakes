@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: About our Approach
 sitemap: true
 permalink: /docs/approach/
 ---
