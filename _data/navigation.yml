@@ -19,7 +19,7 @@ docs:
       - title: "Deployments"
         url: /docs/live_deployments/
       - title: "About our Approach"
-        url: /docs/faq/
+        url: /docs/approach/
 
   - title: Technical Docs
     children:

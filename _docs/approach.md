@@ -1,7 +1,7 @@
 ---
 title: FAQ
 sitemap: true
-permalink: /docs/faq/
+permalink: /docs/approach/
 ---
 
 The most important thing to know is that the core Blockchain Certificates project is not attempting to 
