@@ -41,6 +41,6 @@ docs:
       - title: "Quick start"
         url: /docs/quick_start/
       - title: "Creating certificates"
-        url: /docs/creating_certs/
+        url: /docs/create_certs/
       - title: "Get the code"
         url: https://github.com/blockchain-certificates
