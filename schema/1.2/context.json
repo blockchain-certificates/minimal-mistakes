@@ -69,10 +69,6 @@
       "givenName": {
         "@id": "schema:givenName"
       },
-      "signer": {
-        "@id": "bc:signer",
-        "@type": "@id"
-      },
       "attribute-signed": {
         "@id": "bc:attribute-signed"
       },

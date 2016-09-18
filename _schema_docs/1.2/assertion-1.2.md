@@ -20,28 +20,33 @@ This property must be one of the following types:
 
 ## `id` (string, required)
 
-URI that links to the certificate on the viewer. Default is https://[domain]/[uid]
+URI that links to the certificate on the viewer.
 
 ## `uid` (string, required)
 
-Unique identifier, in GUID format. 1.2 changes: string pattern changed to guid
+Unique identifier, in GUID format. V1.2 change: string pattern changed to guid
 
 Additional restrictions:
 
 * Regex pattern: `[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}`
 
-## `issuedOn` (, required)
+## `issuedOn` ([DateTime](https://openbadgespec.org/v1/schema/assertion.json#/definitions/DateTime), required)
 
 Date the the certificate JSON was created.
 
 ## `evidence` (string)
 
-Text, uri, etc. that shows evidence of the recipient's learning that the certificate represents. Can be left as an empty string if not used.
+URL of the work that the recipient did to earn the achievement. This can be a page that links out to other pages if linking directly to the work is infeasible. V1.2 made this field optional, which is consistent with OBI spec.
 
-## `expires`
+## `expires` ([DateTime](https://openbadgespec.org/v1/schema/assertion.json#/definitions/DateTime))
 
-Date the the certificate JSON expires.
+If the achievement has some notion of expiry, this indicates a date when a badge should no longer be considered valid.
 
-## `image:signature` (ImageBase64)
+## `image:signature` (string)
 
-A base-64 encoded png image of the issuer's signature.
+Data URI; a base-64 encoded png image of the certificate's image. https://en.wikipedia.org/wiki/Data_URI_scheme
+
+Additional restrictions:
+
+* Regex pattern: `data:image/png;base64,`
+

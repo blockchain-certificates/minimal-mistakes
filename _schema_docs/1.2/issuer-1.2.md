@@ -8,16 +8,14 @@ Extends the Open Badges Issuer Schema for certificates on the blockchain
 
 The schema defines the following properties:
 
-
 ## `@type` (JsonLdType, required)
 
-A type or an array of types that the assertion object represents. The first or only item should be 'Issuer', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'Assertion'
+A type or an array of types that the issuer object represents. The first or only item should be 'Issuer', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'Issuer'
 
 This property must be one of the following types:
 
 * `string`
 * `array`
-
 
 ## `id` (string, required)
 
@@ -45,5 +43,7 @@ The URL of the issuer's website or homepage
 A text description of the issuing organization
 
 ## `email` (string)
+
+Contact address for the individual or organization.
 
 ## `revocationList` (string)
