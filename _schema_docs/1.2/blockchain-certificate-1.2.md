@@ -10,7 +10,9 @@ The schema defines the following properties:
 
 ## `@context` (JsonLdContext, required)
 
-A link to a valid JSON-LD context file, that maps term names to contexts. Blockchain certificates contexts extend Open Badges contexts, and also define JSON-schema to validate blockchain certificates. This should contain the Blockchain Certificates JSON LD context: https://w3id.org/blockcerts/context
+A link to a valid JSON-LD context file, that maps term names to contexts. Blockchain certificates contexts extend Open Badges contexts, and also define JSON-schema to validate blockchain certificates.
+
+This should contain the Blockchain Certificates JSON LD context: [https://w3id.org/blockcerts/context](https://w3id.org/blockcerts/context).
 
 This property must be one of the following types:
 
