@@ -10,7 +10,7 @@ The schema defines the following properties:
 
 ## `@type` (JsonLdType, required)
 
-A type or an array of types that the assertion object represents. The first or only item should be 'Certificate', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'Assertion'
+A type or an array of types that the certificate represents. The first or only item should be 'Certificate', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'Certificate'
 
 This property must be one of the following types:
 
@@ -41,11 +41,11 @@ Additional restrictions:
 
 ## `issuer` (Issuer, required)
 
-([Issuer, required](/docs/schema/v1_2/issuer/))
+([Issuer, required](/docs/schema/1_2/issuer/))
 
 ## `language` (string)
 
-Represents the ieft language and ieft country codes. Format is [ieft_language]-[IEFT_COUNTRY]. 1.2 changes: this field is optional
+Represents the ieft language and ieft country codes. Format is [ieft_language]-[IEFT_COUNTRY]. V1.2 changes: this field is optional
 
 Additional restrictions:
 
@@ -53,7 +53,7 @@ Additional restrictions:
 
 ## `subtitle` (string)
 
-Subtitle of the certificate. 1.2 changes: this type is now string, and this field is optional
+Subtitle of the certificate. V1.2 changes: this type is now string, and this field is optional
 
 ## `title` (string, required)
 

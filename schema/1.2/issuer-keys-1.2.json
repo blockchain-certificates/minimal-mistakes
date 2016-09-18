@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://www.blockcerts.org/schema/1.2/issuer-keys-1.2.json",
+  "type": "object",
+  "properties": {
+    "issuerKeys": {
+      "type": "array",
+      "description": "list of issuer keys, listed in descending date order (most recent first). V1.2 change: renamed from issuer_key, added optional invalidated field.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 formatted date time the key was activated."
+          },
+          "key": {
+            "type": "string",
+            "description": "Bitcoin address (compressed public key, usually 24 characters) that the issuer uses to issue the certificates."
+          },
+          "invalidated": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Optional ISO-8601 formatted date time the key was invalidated."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "key"
+        ]
+      }
+    },
+    "revocationKeys": {
+      "type": "array",
+      "description": "list of revocation keys, listed in descending date order (most recent first). V1.2 changes: renamed from revocation_key, added optional invalidated field.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time",
+            "description": "ISO-8601 formatted date time the key was activated."
+          },
+          "key": {
+            "type": "string",
+            "description": "Bitcoin address (compressed public key, usually 24 characters) that the issuer uses to revoke the certificates."
+          },
+          "invalidated": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Optional ISO-8601 formatted date time the key was invalidated."
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "date",
+          "key"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "issuerKeys",
+    "revocationKeys"
+  ]
+}

@@ -17,20 +17,37 @@ This property must be one of the following types:
 * `string`
 * `array`
 
-
 ## `certificate` (Certificate, required)
 
-[Certificate](/docs/schema/v1_2/certificate/)
+[Certificate](/docs/schema/1_2/certificate/)
 
 ## `assertion` (Assertion, required)
 
-[Assertion](/docs/schema/v1_2/assertion/)
+[Assertion](/docs/schema/1_2/assertion/)
 
 ## `verify` (VerificationObject, required)
 
+## `recipient` (Recipient, required)
+
+---
+
+# Sub Schemas
+
+The schema defines the following additional types:
+
+## `VerificationObject` (object)
+
+V1.2 notice: the Blockchain Certificates VerificationObject will change in the next schema version to be consistent with OBI VerificationObjects. This work is in progress.
+
 Properties of the `VerificationObject` object:
 
-### `type` (string, enum)
+### `attribute-signed` (string, required)
+
+Name of the attribute in the json that is signed by the issuer's private key. Default is 'uid', referring to the uid attribute.
+
+### `type` (string, enum, required)
+
+Name of the signing method. Default is 'ECDSA(secp256k1)', referring to the Blockchain Certificates method of signing messages with the issuer's private key.
 
 This element must be one of the following enum values:
 
@@ -38,9 +55,11 @@ This element must be one of the following enum values:
 * `signed`
 * `ECDSA(secp256k1)`
 
-### `url` (string)
+### `signer` (string, required)
 
-## `recipient` (Recipient, required)
+URI where issuer's public key is presented. Default is https://[domain]/keys/[org-abbr]-certs-public-key.asc
+
+## `Recipient` (object)
 
 Properties of the `Recipient` object:
 
@@ -60,7 +79,7 @@ Type of value in the identity field. Default is 'email'.
 
 ### `hashed` (boolean, required)
 
-Describes if the value in the identity field is hashed or not. We strongly recommend that the issuer hash the identy to protect the recipient. Backcompatible change to allow 2 types that occurred in the wild before proper validation.
+Describes if the value in the identity field is hashed or not. We strongly recommend that the issuer hash the identy to protect the recipient.
 
 ### `salt` (string)
 

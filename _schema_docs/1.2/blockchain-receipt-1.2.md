@@ -9,6 +9,15 @@ Provides evidence of the certificate on the blockchain, using the chainpoint v2 
 
 The schema defines the following properties:
 
+## `@type` (JsonLdType, required)
+
+A type or an array of types that the receipt object represents. The first or only item should be 'BlockchainReceipt', and any others should each be an IRI (usually a URL) corresponding to a definition of the type itself. In almost all cases, there will be only one type: 'BlockchainReceipt'
+
+This property must be one of the following types:
+
+* `string`
+* `array`
+
 ## `type` (string, required)
 
 type of hash. Currently the only supported hash type is SHA256, with chainpoint type ChainpointSHA256v2.
