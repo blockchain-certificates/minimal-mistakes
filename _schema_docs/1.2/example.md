@@ -9,7 +9,7 @@ Image fields have been truncated for clarity.
 ```
 
 {
-  "@context": "http://www.blockcerts.org/schema/1.2/context.json",
+  "@context": "https://w3id.org/blockcerts/v1",
   "@type": "BlockchainCertificate",
   "document": {
     "@type": "CertificateDocument",
