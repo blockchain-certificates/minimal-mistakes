@@ -1,7 +1,7 @@
 ---
-title: Issuer Keys Schema Version 1.2
+title: Issuer Id Schema Version 1.2
 sitemap: true
-permalink: /docs/schema/1_2/issuer_keys/
+permalink: /docs/schema/1_2/issuer_id/
 ---
 
 The schema defines the following properties:
@@ -45,3 +45,31 @@ Bitcoin address (compressed public key, usually 24 characters) that the issuer u
 ## `invalidated` (string)
 
 Optional ISO-8601 formatted date time the key was invalidated.
+
+# `id` (string, required)
+
+The URL of the issuer's website or homepage
+
+# `name` (string, required)
+
+Human-readable name of the issuing entity
+
+# `email` (string, required)
+
+Contact address for the individual or organization.
+
+# `url` (string, required)
+
+The URL where the issuer's certificates can be found
+
+# `introductionURL` (string, required)
+
+The URL hosting the issuer's introduction endpoint
+
+# `image` (string, required)
+
+Data URI; a base-64 encoded png image of the issuer's image. https://en.wikipedia.org/wiki/Data_URI_scheme
+
+Additional restrictions:
+
+* Regex pattern: `data:image/png;base64,`

@@ -17,6 +17,10 @@ is that 1.2 extends v1.2 to include the blockchain transaction "receipt", based 
 
 ![Schema V1_2 Changes](/images/schema_v1_2_changes.png "Schema V1_2 Changes")
 
+## Example
+
+[Simplified Example](/docs/schema/1_2/example/)
+
 ## Version 1.2
 
 - [Blockchain Certificates JSON LD context](https://w3id.org/blockcerts/context)
@@ -26,7 +30,7 @@ is that 1.2 extends v1.2 to include the blockchain transaction "receipt", based 
     - [Certificate](/docs/schema/1_2/certificate/)
         - [Issuer](/docs/schema/1_2/issuer/) 
   - [Blockchain Receipt](/docs/schema/1_2/receipt/)
-- [Example](/docs/schema/1_2/example/)
+- [Issuer Identification](/docs/schema/1_2/issuer_id/)
 
 ## Version 1.1
 
