@@ -1,6 +1,8 @@
 ## Blockchain Certificates Project
 
-[MIT’s Media Lab Learning Initiative](http://learn.media.mit.edu/) and [Learning Machine](http://www.learningmachine.com/) are building an open-source ecosystem for creating, sharing, and verifying [blockchain-based educational certificates](https://medium.com/mit-media-lab/certificates-reputation-and-the-blockchain-aee03622426f). These digital certificates are registered on the Bitcoin blockchain, cryptographically signed, tamper proof, and shareable. Our goal is to enable a wave of innovation that results in learners having the capacity to possess and share official records of achievement. We invite feedback, contributions, and general discussion.
+Blockcerts is an open-source ecosystem for creating, sharing, and verifying [blockchain-based educational certificates](https://medium.com/mit-media-lab/certificates-reputation-and-the-blockchain-aee03622426f). These digital certificates are registered on the Bitcoin blockchain, cryptographically signed, tamper proof, and shareable. Our goal is to enable a wave of innovation that results in learners having the capacity to possess and share official records of achievement. We invite feedback, contributions, and general discussion. 
+
+The initial design and development is lead by [MIT’s Media Lab Learning Initiative](http://learn.media.mit.edu/) and [Learning Machine](http://www.learningmachine.com/), but we are actively encouraging other collaborators to get involved. 
 
 <a href="images/abc.png"><img src="images/abc.png" width="600" align="middle"></a>
 
@@ -22,17 +24,15 @@ A good way to interact with Blockchain Certificates in the wild to [view some li
 
 ## Development Calendar
 
-This ongoing project will gain layers of sophistication over time. The list below highlights major milestones and their related features:
+Major milestones and their related features:
 
-* June 2016 - Issue/View/Verify Single Certificate (prototype release)
-* September 2016 - Mobile app for recipients to hold/share certificates
-* October 2016 - Batch issuance of certificates using merkle tree
+* June 2016 - Prototype (v1) release (supports issueing, viewing, and verification of blockchain certificates)
+* September 2016 - Mobile app (iOS) for recipients to manage their certificates
+* October 2016 - (v2) release (supports batch issuing of certificates using merkle trees)
 
 
 ## Contact
 
-For more information about this project, please direct your inquiry to one of these contacts:
+For more information about this project, or to request an invitiation to the [developer slack team](https://blockcerts.slack.com), please get in touch:
 
-- Blockchain Certificates Team - <mailto:certs@mit.edu>
-- MIT Media Lab Certificates Team - <mailto:certs@media.mit.edu>
-- Learning Machine - <mailto:info@learningmachine.com>
+- Blockchain Certificates Team - <mailto:info@blockcerts.org>
