@@ -4,7 +4,7 @@ layout: guide
 
 ## Creating Blockchain Certificates
 
-The [cert-tools](https://github.com/blockchain-certificates/cert-tools) repo contains rudimentary scripts to help create a Blockchain Certificate. These are simple, but very configurable, and include some fake data to get started. There are two components to creating certificates: creating templates and instantiating a batch. After running these scripts, you will have a Blockchain Certificate that is compliant with the standard schema.
+The [cert-tools](https://github.com/blockchain-certificates/cert-tools) repo contains rudimentary scripts to help create a Blockchain Certificate. These are simple, but very configurable, and include some sample data to get started. There are two components to creating certificates: creating templates and instantiating a batch. After running these scripts, you will have a Blockchain Certificate that is compliant with the standard schema.
 
 Detailed information is in the [cert-tools README.md](https://github.com/blockchain-certificates/cert-tools/blob/master/README.md).
 
