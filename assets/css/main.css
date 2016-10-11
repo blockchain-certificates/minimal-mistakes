@@ -8490,7 +8490,7 @@ input.call_to_action__form__item--08 {
   color: #242526;
 }
 .about__text--04 ol{
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
 .about__text--04 ol li{
@@ -11795,4 +11795,10 @@ input.cover__form__item--13 {
   margin-bottom: 25px;
   font-size: 38px;
   color: #062450;
+}
+
+.guide-content img {
+  max-width: 100%;
+  max-width: 720px;
+  margin: 2em 0;
 }
