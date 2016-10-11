@@ -10,17 +10,17 @@ The issuer builds a Merkle tree of certificate hashes and registers the Merkle r
 
 ### How it works
 
-Suppose the batch contains `n` certificates, and certificate `i` contains recipient `i`'s information:
-
-![](/assets/img/pictures/cert_i.png)
-
-The issuer hashes each certificate and combines then into a Merkle tree as follows:
+Suppose the batch contains `n` certificates, and certificate `i` contains recipient `i`'s information. The issuer hashes each certificate and combines them into a Merkle tree:
 
 ![](/assets/img/pictures/merkle.png)
 
-The root of the Merkle tree is issued on the Bitcoin blockchain. The complete Bitcoin transaction outputs are described in 'Transaction structure'.
+The root of the Merkle tree, which is a 256-bit hash, is issued on the Bitcoin blockchain. The complete Bitcoin transaction outputs are described in 'Transaction structure'.
 
-The Blockchain Certificate given to recipient `i` contains a [Chainpoint V2-formatted Merkle receipt](https://github.com/chainpoint/whitepaper/raw/master/chainpoint_white_paper.pdf) proving that certificate `i` is contained in the Merkle tree. This receipt contains:
+The Blockchain Certificate given to recipient `i` contains a [Chainpoint V2-formatted Merkle receipt](https://github.com/chainpoint/whitepaper/raw/master/chainpoint_white_paper.pdf) proving that certificate `i` is contained in the Merkle tree. 
+
+<img src="/assets/img/pictures/blockchain_certificate_components.png" width="350">
+
+This receipt contains:
  * The Bitcoin transaction ID storing the Merkle root
  * The Merkle path from recipient `i`'s certificate to the Merkle root, i.e. the path highlighted in orange above. h_i -> … -> root
 
@@ -46,6 +46,6 @@ How a batch is defined can vary, but it should be defined such that it changes i
 
 Each recipient’s Bitcoin address and revocation address are included in the transaction outputs. This means that the Issuer needs to create and track the revocation private/public key per recipient. The verification process checks whether the recipient-specific revocation address in a certificate is spent. If so, then the certificate is invalid.
 
-![](/assets/img/pictures/tx_out.png)
+<img src="/assets/img/pictures/tx_out.png" width="350">
 
 
