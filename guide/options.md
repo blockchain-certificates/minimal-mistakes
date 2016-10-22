@@ -32,7 +32,7 @@ Running a full Bitcoin node provides the most control and removes dependencies o
 
 Note that this uses the same Bitcoin daemon mentioned in ‘Testnet’ -- just with different configuration options.
 
-Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node and configure it to use testnet. 
+Our [Bitcoind instructions](https://github.com/blockchain-certificates/cert-issuer/blob/master/docs/bitcoind.md) describe how to install a Bitcoin node. 
 
 **Blockchain.info**
 

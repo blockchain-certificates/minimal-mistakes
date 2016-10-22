@@ -6,7 +6,7 @@ layout: guide
 
 The Blockchain Certificates quick start guide makes some content and service hosting simplifications that should be considered before issuing certificates.
 
-An issuer must provide permanent URLs for certain content referenced in Blockchain Certificate. This enables:
+An issuer should provide permanent URLs for certain content referenced in Blockchain Certificate. This enables:
 
 *   Certificate verification: the hosted issuer identity information is used at verification time to ensure the certificate is valid
 *   Convenience for recipient: the recipient can share a URL pointing to their certificate
@@ -53,7 +53,8 @@ document.certificate.issuer.id = https://example.org/organization.json
 
 ### Hosting Issued Certificates
 
-If the issuer and recipient agree that the certificate content is safe to share (it doesn't contain confidential information), issuers can host the certificates they've issued as a convenience to their recipients. Issuers should also provide the recipient with their complete JSON-formatted Blockchain Certificate to the issuer's site availability. Issuers are encouraged to protect the recipient's email by hashing it.
+**Privacy considerations** 
+If the issuer and recipient agree that the certificate content is safe to share (it doesn't contain confidential information), issuers should host the certificates they've issued as a convenience to their recipients. Issuers should also provide the recipient with their complete JSON-formatted Blockchain Certificate (or recommend they download it) so that recipients have access to their certificates even if the issuer's site is down. **Issuers are encouraged to protect the recipient's email by hashing it.**
 
 The [cert-viewer](https://github.com/blockchain-certificates/cert-viewer) project provides an endpoint to display the certificate in preview form, and the raw JSON format.
 
