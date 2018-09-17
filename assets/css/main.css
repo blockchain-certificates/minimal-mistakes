@@ -1,4 +1,4 @@
-/*!
+/*/
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -276,6 +276,16 @@ body {
   color: #4E5B6F;
   background-color: #fff; }
 
+@media all and (-ms-high-contrast: none) {
+  /* hack: IE11
+      the above body line-height leaks into the button and breaks the alignment with the input
+      since this is an IE11 and blockcerts.org issue only we hack it back into place.
+   */
+  .buv-c-verify-button {
+    line-height: 1.4;
+  }
+}
+
 [tabindex="-1"]:focus {
   outline: none !important; }
 
@@ -367,10 +377,6 @@ caption {
 
 th {
   text-align: left; }
-
-label {
-  display: inline-block;
-  margin-bottom: .5rem; }
 
 button:focus {
   outline: 1px dotted;

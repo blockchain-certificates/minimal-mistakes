@@ -52,10 +52,9 @@
 
       console.log(logo, on, off, on, off, on, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, off, off, on, off, on, off, on, off, on, off, on, text);
     </script>
-
-    <script src="https://blockcertscomponent.learningmachine.com/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
-
-    <link rel="import" href="https://blockcertscomponent.learningmachine.com/credential-verifier.html">
+    <script src="../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/@blockcerts/blockcerts-verifier/dist/ie11.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i" rel="stylesheet">
 
@@ -131,7 +130,7 @@
                   
             <div class="verifier">
               <h2 class="hero-title">Blockcerts Universal Verifier</h2>    
-                <credential-verifier></credential-verifier>
+                <blockcerts-verifier></blockcerts-verifier>
             </div>
 
           </div>
